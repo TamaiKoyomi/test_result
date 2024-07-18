@@ -32,12 +32,12 @@ def gra():
             tickangle = 0,
             title_text = '教科',
             title_standoff = 100
-        )
+        ),
         yaxis = dict(
             tickangle = 0,
             title_text = '点数',
             title_standoff = 100
-        )
+        ),
         title = 'テストの点数'
     )
 
