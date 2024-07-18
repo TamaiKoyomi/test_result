@@ -18,7 +18,7 @@ def judge():
         return False
 
 def gra():
-    fig = go.Figure(data = [go.Bar(x = '教科',y = '点数')])
+    fig = go.Figure(data = [go.Bar(x=sub,y=scores)])
     fig.update_layout(
         xaxis = dict(
             tickangle = 0,
