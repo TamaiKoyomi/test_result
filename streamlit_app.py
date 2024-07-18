@@ -14,19 +14,14 @@ sub = ['数学','理科','国語','英語','社会']
 scores = [ma,sc,ja,en,so]
 
 def gra():
-    fig = go.Figure(data = [go.Bar(x=sub,y=scores)])
-    fig.update_layout(
-        xaxis = dict(
-            tickangle = 0,
-            title_text = '教科',
-            title_standoff = 100
-        ),
-        yaxis = dict(
-            tickangle = 0,
-            title_text = '点数',
-            title_standoff = 100
-        ),
-        title = 'テストの点数')
+    data = go.Bar(
+        x = sub,
+        y = scores
+    )
+    fig = go.Figure(
+        data = data,
+    )
+    fig.show()
 
 if st.button('結果を見る'):
     gra()
