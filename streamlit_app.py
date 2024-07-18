@@ -4,20 +4,14 @@ import plotly.graph_objs as go
 
 st.subheader('あなたの点数を入力してください')
 
-ma = st.number_input('数学',value = None,placeholder = 'type your score')
-sc = st.number_input('理科',value = None,placeholder = 'type your score')
-ja = st.number_input('国語',value = None,placeholder = 'type your score')
-en = st.number_input('英語',value = None,placeholder = 'type your score')
-so = st.number_input('社会',value = None,placeholder = 'type your score')
+ma = st.number_input('数学',value = 0,label='number',min_value=0,max_value=100,placeholder = 'type your score')
+sc = st.number_input('理科',varue = 0,label='number',min_value=0,max_value=100,placeholder = 'type your score')
+ja = st.number_input('国語',varue = 0,label='number',min_value=0,max_value=100,placeholder = 'type your score')
+en = st.number_input('英語',varue = 0,label='number',min_value=0,max_value=100,placeholder = 'type your score')
+so = st.number_input('社会',varue = 0,label='number',min_value=0,max_value=100,placeholder = 'type your score')
 
 sub = ['数学','理科','国語','英語','社会']
 scores = [ma,sc,ja,en,so]
-
-def judge():
-    if ma>100 or sc>100 or ja>100 or en>100 or so>100 or ma<0 or sc<0 or ja<0 or en<0 or so<0:
-        return False
-    else:
-        return True
 
 def gra():
     fig = go.Figure(data = [go.Bar(x=sub,y=scores)])
@@ -35,7 +29,4 @@ def gra():
         title = 'テストの点数')
 
 if st.button('結果を見る'):
-    if judge() == True:
-        gra()
-    elif judge() == False:
-        st.write('値が間違っています。正しい値を入力してください')
+    gra()
