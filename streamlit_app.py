@@ -10,7 +10,7 @@ ja = st.number_input('国語',value = 0,min_value=0,max_value=100)
 en = st.number_input('英語',value = 0,min_value=0,max_value=100)
 so = st.number_input('社会',value = 0,min_value=0,max_value=100)
 
-def gra():
+if st.button('結果を見る'):
     data = go.Bar(
         x = ['数学','理科','国語','英語','社会'],
         y = [ma,sc,ja,en,so]
@@ -19,6 +19,3 @@ def gra():
         data = data,
     )
     fig.show()
-
-if st.button('結果を見る'):
-    gra()
