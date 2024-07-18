@@ -30,8 +30,7 @@ def gra():
             title_text = '点数',
             title_standoff = 100
         ),
-        title = 'テストの点数'
-    )
+        title = 'テストの点数')
 
 if st.button('結果を見る'):
     if judge() == True:
