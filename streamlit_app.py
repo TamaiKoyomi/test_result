@@ -14,16 +14,8 @@ sub = ['数学','理科','国語','英語','社会']
 scores = [ma,sc,ja,en,so]
 
 def judge():
-    if ma > 100 or ma < 0:
-        st.write('数学の値が正しくありません。正しい値を入力してください。')
-    if sc > 100 or sc < 0:
-        st.write('理科の値が正しくありません。正しい値を入力してください。')
-    if ja > 100 or ja < 0:
-        st.write('国語の値が正しくありません。正しい値を入力してください。')
-    if en > 100 or en < 0:
-        st.write('英語の値が正しくありません。正しい値を入力してください。')
-    if so > 100 or so < 0:
-        st.write('社会の値が正しくありません。正しい値を入力してください。')
+    if ma > 100 or sc > 100 or ja > 100 or en > 100 or so > 100 or ma < 0 or sc < 0 or ja < 0 or en < 0 or so < 0:
+        return False
 
 def gra():
     fig = go.Figure(data = [go.Bar(x = '教科',y = '点数')])
@@ -44,3 +36,5 @@ def gra():
 if st.button('結果を見る'):
     if judge() == True:
         gra()
+    elif judge() == False:
+        st.write('値が間違っています。正しい値を入力してください')
