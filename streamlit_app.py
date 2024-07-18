@@ -4,11 +4,11 @@ import plotly.graph_objs as go
 
 st.subheader('あなたの点数を入力してください')
 
-ma = st.number_input('数学',value = 0,min_value=0,max_value=100,placeholder = 'type your score',0)
-sc = st.number_input('理科',varue = 0,min_value=0,max_value=100,placeholder = 'type your score',0)
-ja = st.number_input('国語',varue = 0,min_value=0,max_value=100,placeholder = 'type your score',0)
-en = st.number_input('英語',varue = 0,min_value=0,max_value=100,placeholder = 'type your score',0)
-so = st.number_input('社会',varue = 0,min_value=0,max_value=100,placeholder = 'type your score',0)
+ma = st.number_input('数学',value = 0,min_value=0,max_value=100,placeholder = 'type your score')
+sc = st.number_input('理科',varue = 0,min_value=0,max_value=100,placeholder = 'type your score')
+ja = st.number_input('国語',varue = 0,min_value=0,max_value=100,placeholder = 'type your score')
+en = st.number_input('英語',varue = 0,min_value=0,max_value=100,placeholder = 'type your score')
+so = st.number_input('社会',varue = 0,min_value=0,max_value=100,placeholder = 'type your score')
 
 sub = ['数学','理科','国語','英語','社会']
 scores = [ma,sc,ja,en,so]
