@@ -14,8 +14,11 @@ sub = ['数学','理科','国語','英語','社会']
 scores = [ma,sc,ja,en,so]
 
 def judge():
-    if ma > 100 or sc > 100 or ja > 100 or en > 100 or so > 100 or ma < 0 or sc < 0 or ja < 0 or en < 0 or so < 0:
-        return False
+    for su in scores:
+        if su < 0 or su > 100:
+            return False
+        else:
+            pass
 
 def gra():
     fig = go.Figure(data = [go.Bar(x=sub,y=scores)])
