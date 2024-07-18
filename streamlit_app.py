@@ -10,13 +10,10 @@ ja = st.number_input('国語',value = 0,min_value=0,max_value=100)
 en = st.number_input('英語',value = 0,min_value=0,max_value=100)
 so = st.number_input('社会',value = 0,min_value=0,max_value=100)
 
-sub = ['数学','理科','国語','英語','社会']
-scores = [ma,sc,ja,en,so]
-
 def gra():
     data = go.Bar(
-        x = sub,
-        y = scores
+        x = ['数学','理科','国語','英語','社会'],
+        y = [ma,sc,ja,en,so]
     )
     fig = go.Figure(
         data = data,
